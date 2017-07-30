@@ -21,4 +21,6 @@ A sample JSON file is included in the project.
 ## Instructions for working on github
 - Clone this repository to your local computer.
 - Create a branch called `your-name-version-x.x` (I suggest starting with version-0.1 and then incrementing it as you improve the project).
-- If you want to host the data.json file with json server you need to first run `npm install` and then whenever you want to start the server you run `npm start`
+
+## Instructions about the included server
+You can choose to read data directly from the data.json or you can host it with the included server. If you want to host the data.json file with json server you need to first run `npm install` and then whenever you want to start the server you run `npm start`
