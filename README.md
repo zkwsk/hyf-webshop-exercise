@@ -17,3 +17,7 @@ The clients has requested some additional features. Try to cover as many of thes
 - Fetching the data from a remote server. You can use JSON server to build a quick API from a single JSON file. Try to use promises when communicating with the server.
 
 A sample JSON file is included in the project.
+
+## Instructions for working on github
+Clone this repository to your local computer.
+Create a branch called `your-name-version-x.x` (I suggest starting with version-0.1 and then incrementing it as you improve the project).
