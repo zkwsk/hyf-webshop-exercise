@@ -12,7 +12,7 @@ As a minimum it should allow the user to:
 - You are allowed to store product data in a json file in your application, but see below for a better solution.
 
 The clients has requested some additional features. Try to cover as many of these as you can:
-- Assigning categories to products and browsing products "by category"
+- Assigning country of origin to products and browsing products "by country of origin"
 - The clients wants to offer a 10% discount if you add 5 items of the same type to the cart.
 - Fetching the data from a remote server. You can use JSON server to build a quick API from a single JSON file. Try to use promises when communicating with the server.
 
