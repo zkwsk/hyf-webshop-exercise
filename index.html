@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>WEB SHOP</title>
+<link  rel="stylesheet", href ="ws.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/template" id='template'>
+   <div class= "container">
+     <div class ="product">
+      <div class="product-image">
+<!--           <img src="" alt="Squish The Casper Mattress" class="alignnone size-full wp-image-32262">
+ -->          </div>
+      <div class= "product-info">
+         <div class="product-name">
+           
+         </div>
+         <div class= "product-price">
+        
+         </div>
+      </div>
+    </div>
+    <div class="btn"></div>
+   </div>
+</script>
+<script>
+  $(document).ready(function() {
+        var template = $('#template').html();
+    // var a=["1.PNG","2.PNG","3.PNG","4.PNG","5.PNG","6.PNG","7.PNG","8.PNG","9.PNG","10.PNG","11.PNG"];
+      $.getJSON("data.json", function(result) {
+          var mydata=result.products;
+          console.log(mydata);
+           mydata.forEach(function(val) {
+           var product = $(template).clone();
+          var y= val.item_name+',      Price:'+val.price +'$     Origin: '+val.country_of_origin  ;
+
+          //product.find('li').id('<img src="./'+val.url+'.png">');
+          // product.find('ul').text('<h1>helllllllo</h1>');
+          // var j= i + '.PNG';
+          console.log(val.id+'price:'+val.price);
+          product.find('.btn').html('<button id="'+val.id+'">BUY</button>');
+          product.find('.product-image').html('<img src="./photos/'+val.url+'">');
+          product.find('.product-name').text(y);
+          $("#outer").append(product);
+            
+             });
+    //     $.getJSON("cart.json", function(res) {data.items.push(
+    // {id: "7", name: "Douglas Adams", type: "comedy"} );
+    //   });
+
+
+        //   var data=res.products;
+          // var newMovie = {cast:'Jack Nicholson', director:'hrt'};
+          //     data.push(newMovie);
+         var data = {items:[]};
+        // var counter;
+        var totalPrice=0;
+        var x=0;
+        $(".btn").on('click',function(event) {
+          x+=1;
+          // x=mydata[event.target.id].price;
+          // totalPrice+=x;
+          // counter=counter+1;
+          // console.log(mydata[event.target.id-1],'before');
+          totalPrice=totalPrice+mydata[event.target.id-1].price;
+              console.log(x +"  :   " +" "+ mydata[event.target.id-1].item_name,mydata[event.target.id-1].id);
+              data.items.push(
+             {name: mydata[event.target.id-1].item_name,price:mydata[event.target.id-1].price});
+               });
+        // console.log(mydata[event.target.id-1]+'afterrr');
+         $("#showcart").on('click',function() {
+           localStorage.setItem('Total Price: ',totalPrice);
+           localStorage.setItem('Amount',x);
+           data=JSON.stringify(data);
+           localStorage.setItem('All',data);
+          console.log( JSON.parse ( localStorage.getItem('All')));
+          // localStorage.removeItem('Amount');
+
+           // console.log('Total Price: ',totalPrice);
+           // console.log('Amount: ',x);
+           //  console.log(data);
+           
+         });
+
+
+        // data.items.push({Amount:counter,TotalPrice:totalPrice});
+// $("#btn ").on('click',function () {
+//            console.log(products.id);
+//             });
+
+        
+       
+    //  var x=$("#btn").
+    // sum.push(x);
+    // console.log(sum);
+    // $.getJSON( "cast.json", function( data ) {
+  // now data is JSON converted to an object / array for you to use.
+  // alert( data[1].cast ) // Tim Robbins, Morgan Freeman, Bob Gunton
+  // var newMovie = {cast:'Jack Nicholson', director:...} // a new movie object
+
+  // data.push();      
+// });
+
+                   
+        // });
+
+           
+        
+      });
+    });
+   
+  
+</script>
+</head>
+ <body>
+      <h1>WEB SHOP</h1>
+      <button id="showcart">Show cart</button>
+      <div id="outer"></div>
+
+      <!-- <button id="getMovies">
+        Get Movies
+      </button> -->
+ </body>
+</html>
+
+
+
+</body>
+</html>
