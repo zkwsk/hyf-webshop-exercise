@@ -1,5 +1,5 @@
 {
-  "products": [
+    "products": [
     {"id":1,"item_name":"The Pop Shoppe - Cream Soda","country_of_origin":"Melanesian","price":96.84},
     {"id":2,"item_name":"Steel Wool S.o.s","country_of_origin":"Alaska Native","price":3.92},
     {"id":3,"item_name":"V8 Splash Strawberry Banana","country_of_origin":"Black or African American","price":36.34},
