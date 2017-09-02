@@ -6,21 +6,16 @@ import SearchBar from './components/search_bar';
 import AllProducts from './components/all_products';
 import Footer from './components/footer';
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+const App = () => {
 
-    render() {
-        return (
-            <div>
-                <StoreName />
-                <SearchBar />
-                <AllProducts />
-                <Footer />
-            </div>
-        );
-    } 
+    return (
+        <div>
+            <StoreName />
+            <SearchBar />
+            <AllProducts />
+            <Footer />
+        </div>
+    );
 };
 
 ReactDOM.render(<App />, document.querySelector('.container'));

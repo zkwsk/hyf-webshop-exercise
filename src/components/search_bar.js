@@ -1,30 +1,37 @@
 import React from 'react';
 
-class SearchBar extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
+const SearchBar = () => {
 
 		const style = {
-						backgroundColor: '#5EA000',
-	 					color: '#FFFFFF',
+						backgroundColor: '#F6F9E5',
 	 					fontFamily: 'Garamond',
-	 					fontSize: 16,
+	 					fontSize: '22px',
 						width: '100%',
-						height: '50px',
+						height: '60px',
 						padding: '10px',
-						'text-align': 'center'
+						textAlign: 'center'
+					};
+
+		const inputStyle = {
+						width: '30%',
+						margin: 'auto',
+						height: '40px',
+						textAlign: 'center'
+					};
+
+		const buttonStyle = {
+						backgroundColor: '#5EA000',
+						margin: 'auto',
+						height: '40px',
+						textAlign: 'center'
 					};
 
 		return (
 			<div id="searchArea" className='well' style={style}>
-      			<span><input type='' id='searchBar' width='80%' placeholder='Please enter the search term here'/></span>
-      			<span><button id='searchButton' className='btn btn-primary btn-success'>Search</button></span>
+      			<span><input type='' id='searchBar' style={inputStyle} /></span>
+      			<span><button id='searchButton' style={buttonStyle}>Search</button></span>
       		</div>
 			);
-	}
-};
+	};
 
 export default SearchBar;
