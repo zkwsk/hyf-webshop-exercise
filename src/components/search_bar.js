@@ -4,7 +4,7 @@ const SearchBar = () => {
 
 		const style = {
 						backgroundColor: '#F6F9E5',
-	 					fontFamily: 'Garamond',
+	 					fontFamily: 'Papyrus',
 	 					fontSize: '22px',
 						width: '100%',
 						height: '60px',

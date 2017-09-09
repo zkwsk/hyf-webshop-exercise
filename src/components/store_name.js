@@ -3,9 +3,9 @@ import React from 'react';
 const StoreName = () => {
 
 	const style = {
-					backgroundColor: '#5EA000',
+					backgroundColor: '#009300',
 	 				color: '#FFFFFF',
-	 				fontFamily: 'Garamond',
+	 				fontFamily: 'Papyrus',
 	 				fontSize: 16
 	 				};
 

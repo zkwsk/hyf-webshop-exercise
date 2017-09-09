@@ -18,7 +18,10 @@ const SingleProduct = (props) => {
 					<img className='product-img' src={props.image_source} alt='product image' height='180px'/>
 					<p className='product-name'><strong>{props.item_name}</strong></p>
 					<p className='product-price'><strong>€{props.product_price}</strong></p>
-					<button className='add-to-cart'>Add to Cart</button>
+					<div>
+						<input type='text' placeholder='quantity' value='quantity' />
+						<button className='add-to-cart' onClick={props.addToCart}>Add to Cart</button>
+					</div>
 				</li>
 		);
 };
