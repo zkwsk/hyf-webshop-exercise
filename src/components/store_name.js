@@ -13,11 +13,11 @@ const StoreName = () => {
 			<ul className="main-nav">
 				<li>
 					<NavLink exact to="/">
-						Store
+						STORE
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/cart">Cart</NavLink>
+					<NavLink to="/cart">CART</NavLink>
 				</li>
 			</ul>
 		</header>

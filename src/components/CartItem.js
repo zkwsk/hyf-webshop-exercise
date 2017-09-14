@@ -31,8 +31,9 @@ class CartItem extends React.Component {
 				</td>
 				<td>
 					<button
-						onClick={() =>
-							CartActions.removeFromCart(this.props.product)}
+						onClick={() => {
+							CartActions.removeFromCart(this.props.product);
+						}}
 					>
 						Remove
 					</button>
