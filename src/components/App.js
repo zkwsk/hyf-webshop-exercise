@@ -13,7 +13,6 @@ import Cart from './Cart';
 class App extends React.Component {
 	constructor() {
 		super(...arguments);
-		CartActions.createCart();
 		this.state = {
 			products: data.products,
 		};
