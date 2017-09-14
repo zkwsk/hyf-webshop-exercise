@@ -1,22 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Match, Miss } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import App from './components/App';
 import Cart from './components/Cart';
 import NotFound from './components/NotFound';
 
-const Root = () => {
+class Root extends React.Component {
+	render() {
+		return (
+			<BrowserRouter>
+				<Switch>
+					<Route exact path="/" component={App} />
+					<Route exact path="/cart" component={Cart} />
+					<Route component={NotFound} />
+				</Switch>
+			</BrowserRouter>
+		);
+	}
+}
 
-    return (
-        <BrowserRouter>
-			<div>
-				<Match exactly pattern='/' component={App} />
-				<Match exactly pattern='/cart' component={Cart} />
-				<Miss component={NotFound} />
-			</div>
-		</BrowserRouter>
-    );
-};
-
-ReactDOM.render(<App />, document.getElementById('container'));
+ReactDOM.render(<Root />, document.getElementById('container'));

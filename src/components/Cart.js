@@ -1,9 +1,52 @@
 import React from 'react';
+import CartStore from '../stores/CartStore';
+import CartActions from '../actions/CartActions';
+
+import CartItem from './CartItem';
 
 class Cart extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
-			<p>The cart contents should appear here. </p>
+			<div>
+				<table className="table table-hover">
+					<thead>
+						<tr className="row">
+							<th>Shopping Cart</th>
+							<th>Item Name</th>
+							<th>Price</th>
+							<th>Quantity</th>
+							<th>Remove Button</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						{this.props.contents.map(product => (
+							<CartItem key={product.id} product={product} />
+						))}
+					</tbody>
+				</table>
+				<div>
+					<span>Subtotal</span>
+					<span>Subtotal</span>
+				</div>
+				<div>
+					<span>Tax</span>
+					<span>25%</span>
+				</div>
+				<div>
+					<span>Shipping</span>
+					<span>Shipping</span>
+				</div>
+				<div>
+					<span>Grand Total</span>
+					<span>Grand Total</span>
+				</div>
+				<button>Checkout</button>
+			</div>
 		);
 	}
 }

@@ -7,17 +7,16 @@ let __emitter = new EventEmitter();
 let cart = [];
 
 let CartStore = {
-	
 	getState() {
 		return cart;
 	},
 
 	addListener(callback) {
 		return __emitter.addListener(CHANGE_EVENT, callback);
-	}
+	},
 };
 
-CartStore.dispatchToken = CartDispatcher.register((action) => {
+CartStore.dispatchToken = CartDispatcher.register(action => {
 	switch (action.type) {
 		case CartActionTypes.CREATE_CART:
 			cart = [];
