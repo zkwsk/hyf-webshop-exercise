@@ -16,7 +16,6 @@ class App extends React.Component {
 		CartActions.createCart();
 		this.state = {
 			products: data.products,
-			cart: CartStore.getState(),
 		};
 	}
 
@@ -39,7 +38,6 @@ class App extends React.Component {
 			<div>
 				<StoreName />
 				<SearchBar />
-				<Cart contents={this.state.cart} />
 				<AllProducts products={this.state.products} />
 				<Footer />
 			</div>

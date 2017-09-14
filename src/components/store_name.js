@@ -1,17 +1,26 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const StoreName = () => {
 	const style = {
-		backgroundColor: '#009300',
-		color: '#FFFFFF',
-		fontFamily: 'Papyrus',
-		fontSize: 16,
+		backgroundColor: '#6DC37B',
 	};
-
 	return (
-		<div className="jumbotron well" style={style}>
-			<h1>Hack Your Groceries</h1>
-		</div>
+		<header style={style}>
+			<span>
+				<img src="src/images/HYG.png" alt="store-logo" />
+			</span>
+			<ul className="main-nav">
+				<li>
+					<NavLink exact to="/">
+						Store
+					</NavLink>
+				</li>
+				<li>
+					<NavLink to="/cart">Cart</NavLink>
+				</li>
+			</ul>
+		</header>
 	);
 };
 

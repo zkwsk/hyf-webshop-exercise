@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBar = () => {
 	const style = {
-		backgroundColor: '#F6F9E5',
+		backgroundColor: '#F3F3F3',
 		fontFamily: 'Papyrus',
 		fontSize: '22px',
 		width: '100%',

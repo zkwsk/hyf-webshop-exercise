@@ -12,7 +12,7 @@ class Root extends React.Component {
 			<BrowserRouter>
 				<Switch>
 					<Route exact path="/" component={App} />
-					<Route exact path="/cart" component={Cart} />
+					<Route path="/cart" component={Cart} />
 					<Route component={NotFound} />
 				</Switch>
 			</BrowserRouter>

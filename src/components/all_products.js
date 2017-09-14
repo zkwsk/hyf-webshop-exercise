@@ -6,7 +6,7 @@ import SingleProduct from './single_product';
 
 const AllProducts = props => {
 	const style = {
-		backgroundColor: '#F6F9E5',
+		backgroundColor: '#F3F3F3',
 	};
 
 	return (

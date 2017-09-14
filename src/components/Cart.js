@@ -7,6 +7,10 @@ import CartItem from './CartItem';
 class Cart extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			cart: CartStore.getState(),
+		};
 	}
 
 	render() {
@@ -24,7 +28,7 @@ class Cart extends React.Component {
 						</tr>
 					</thead>
 					<tbody>
-						{this.props.contents.map(product => (
+						{this.state.cart.map(product => (
 							<CartItem key={product.id} product={product} />
 						))}
 					</tbody>
