@@ -41,7 +41,7 @@ CartStore.dispatchToken = CartDispatcher.register(action => {
 				cartItem => cartItem.product.id === action.payload.product.id
 			);
 			if (productInCart) {
-				productInCart.quantity = action.payload.quantity;
+				productInCart.quantity = Number(action.payload.quantity);
 			} else {
 				cart = cart.concat(action.payload);
 			}

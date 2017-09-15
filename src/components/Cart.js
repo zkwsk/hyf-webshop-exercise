@@ -11,6 +11,8 @@ class Cart extends React.Component {
 
 		this.state = {
 			cart: CartStore.getState(),
+			tax: 0.2,
+			shipping: 0.06,
 		};
 	}
 
@@ -58,15 +60,15 @@ class Cart extends React.Component {
 				</div>
 				<div>
 					<span>Tax</span>
-					<span>25%</span>
+					<span>{`${this.state.tax * 100}%`}</span>
 				</div>
 				<div>
 					<span>Shipping</span>
-					<span>Shipping</span>
+					<span>{`${this.state.shipping * 100}%`}</span>
 				</div>
 				<div>
 					<span>Grand Total</span>
-					<span>Grand Total</span>
+					<span>Total</span>
 				</div>
 				<button>Checkout</button>
 			</div>
