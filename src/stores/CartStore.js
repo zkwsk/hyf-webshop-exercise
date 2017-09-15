@@ -24,12 +24,32 @@ CartStore.dispatchToken = CartDispatcher.register(action => {
 			break;
 
 		case CartActionTypes.ADD_TO_CART:
-			cart = cart.concat(action.product);
+			let productInCart = cart.find(
+				cartItem => cartItem.product.id === action.payload.product.id
+			);
+			if (productInCart) {
+				productInCart.quantity += 1;
+			} else {
+				cart = cart.concat(action.payload);
+			}
+
+			__emitter.emit(CHANGE_EVENT);
+			break;
+
+		case CartActionTypes.UPDATE_QUANTITY:
+			productInCart = cart.find(
+				cartItem => cartItem.product.id === action.payload.product.id
+			);
+			if (productInCart) {
+				productInCart.quantity = action.payload.quantity;
+			} else {
+				cart = cart.concat(action.payload);
+			}
 			__emitter.emit(CHANGE_EVENT);
 			break;
 
 		case CartActionTypes.REMOVE_FROM_CART:
-			cart = cart.filter(product => product !== action.product);
+			cart = cart.filter(cartItem => cartItem.product !== action.payload);
 			__emitter.emit(CHANGE_EVENT);
 			break;
 

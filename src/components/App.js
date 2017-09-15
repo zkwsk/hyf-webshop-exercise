@@ -35,7 +35,6 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<StoreName />
 				<SearchBar />
 				<AllProducts products={this.state.products} />
 				<Footer />

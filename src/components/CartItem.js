@@ -7,24 +7,29 @@ class CartItem extends React.Component {
 		super(props);
 	}
 
+	handleChange(e) {
+		CartActions.updateQuantity(this.props.product, e.target.value);
+	}
+
 	render() {
 		return (
-			<tr>
+			<tr key={this.props.product.id}>
 				<td>
 					<img
-						className="product-img"
+						className="product-img img-fluid"
 						src={`src/images/products/${this.props.product.id}.jpg`}
 						alt="product image"
-						height="20%"
+						height="25%"
 					/>
 				</td>
 				<td>{this.props.product.item_name}</td>
 				<td>{this.props.product.price}</td>
 				<td>
 					<input
+						onChange={this.handleChange.bind(this)}
 						type="number"
 						id="quantity"
-						defaultValue="1"
+						defaultValue={this.props.quantity}
 						min="0"
 						max="10"
 					/>
@@ -38,7 +43,11 @@ class CartItem extends React.Component {
 						Remove
 					</button>
 				</td>
-				<td>{this.props.product.price * 1}</td>
+				<td>
+					{(this.props.product.price * this.props.quantity).toFixed(
+						2
+					)}
+				</td>
 			</tr>
 		);
 	}

@@ -31,7 +31,6 @@ class Cart extends React.Component {
 	render() {
 		return (
 			<div>
-				<StoreName />
 				<table className="table table-hover">
 					<thead>
 						<tr className="row">
@@ -44,8 +43,12 @@ class Cart extends React.Component {
 						</tr>
 					</thead>
 					<tbody>
-						{this.state.cart.map(product => (
-							<CartItem key={product.id} product={product} />
+						{this.state.cart.map(item => (
+							<CartItem
+								key={item.product.id}
+								product={item.product}
+								quantity={item.quantity}
+							/>
 						))}
 					</tbody>
 				</table>
