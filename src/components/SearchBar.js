@@ -2,9 +2,9 @@ import React from 'react';
 
 const SearchBar = () => {
 	return (
-		<div className="well">
+		<div className="well search-bar">
 			<span>
-				<input type="text" />
+				<input type="text" className="search-bar-input" />
 			</span>
 			<span>
 				<button>Search</button>

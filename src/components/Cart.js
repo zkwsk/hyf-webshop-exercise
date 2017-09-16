@@ -13,15 +13,6 @@ class Cart extends React.Component {
 			tax: 0.2,
 			shipping: 0.06,
 		};
-
-		this.getSubTotal = this.getSubTotal.bind(this);
-	}
-
-	getSubTotal() {
-		this.state.cart
-			.map(item => item.product.price * item.quantity)
-			.reduce((sum, value) => sum + value),
-			0;
 	}
 
 	componentDidMount() {
@@ -65,19 +56,22 @@ class Cart extends React.Component {
 						))}
 					</tbody>
 				</table>
-				<div>
-					<span>Subtotal: {this.getSubTotal}</span>
+				<div className="cart-total-checkout">
+					<div className="cart-total">
+						<span className="cart-total-line">
+							Cart Total &nbsp;
+						</span>
+						<span className="cart-total-figure">
+							€{this.state.cart
+								.map(item => item.product.price * item.quantity)
+								.reduce((sum, value) => sum + value, 0)
+								.toFixed(2)}
+						</span>
+					</div>
+					<div>
+						<button className="cart-checkout">Checkout</button>
+					</div>
 				</div>
-				<div>
-					<span>Tax......</span>
-				</div>
-				<div>
-					<span>Shipping.......</span>
-				</div>
-				<div>
-					<span>Grand Total.....</span>
-				</div>
-				<button>Checkout</button>
 			</div>
 		);
 	}
