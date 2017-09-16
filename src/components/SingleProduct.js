@@ -9,32 +9,21 @@ class SingleProduct extends React.Component {
 
 	render() {
 		return (
-			<li
-				style={{
-					display: 'inline-block',
-					width: '240px',
-					height: '290px',
-					margin: '3px 10px',
-					padding: '10px',
-					border: '1px solid #5EA000',
-					textAlign: 'center',
-					fontFamily: 'Garamond',
-				}}
-			>
+			<li className="store-single-product">
 				<img
-					className="product-img"
+					className="store-product-img"
 					src={`src/images/products/${this.props.product.id}.jpg`}
 					alt="product image"
 					height="180px"
 				/>
-				<p className="product-name">
+				<p className="store-product-name">
 					<strong>{this.props.product.item_name}</strong>
 				</p>
-				<p className="product-price">
+				<p className="store-product-price">
 					<strong>€{this.props.product.price}</strong>
 				</p>
 				<button
-					className="add-to-cart"
+					className="store-add-to-cart"
 					onClick={() => CartActions.addToCart(this.props.product)}
 				>
 					Add to Cart

@@ -1,13 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const StoreName = () => {
-	const style = {
-		backgroundColor: '#6DC37B',
-	};
+const Header = () => {
 	return (
-		<header style={style}>
-			<span>
+		<header>
+			<span className="icn-logo">
 				<img src="src/images/HYG.png" alt="store-logo" />
 			</span>
 			<ul className="main-nav">
@@ -24,4 +21,4 @@ const StoreName = () => {
 	);
 };
 
-export default StoreName;
+export default Header;

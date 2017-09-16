@@ -1,0 +1,212 @@
+/*
+App component had no internal style. Nothing removed.
+*/
+
+/*
+Header component had the following style:
+	const style = {
+		backgroundColor: '#6DC37B',
+	};
+*/
+
+/*
+	SearchBar had the following style and a bootstrap class "well":
+	const style = {
+		backgroundColor: '#F3F3F3',
+		fontFamily: 'Papyrus',
+		fontSize: '22px',
+		width: '100%',
+		height: '60px',
+		padding: '10px',
+		textAlign: 'center',
+	};
+
+	const inputStyle = {
+		width: '30%',
+		margin: 'auto',
+		height: '40px',
+		textAlign: 'center',
+	};
+
+	const buttonStyle = {
+		backgroundColor: '#5EA000',
+		margin: 'auto',
+		height: '40px',
+		textAlign: 'center',
+	};
+*/
+
+/*
+AllProducts component: main div has an id of "all-products" and has a className of "well"
+*/
+
+.store-all-products {
+	width: 90%;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+/*SingleProduct component had the following style and the image element has a height property of 180px:*/
+.store-single-product {
+	display: inline-block;
+	width: 240px;
+	height: 290px;
+	margin: 5px 10px;
+	padding: 10px;
+	border: 1px solid #5ea000;
+	text-align: center;
+}
+
+.store-product-img {
+	height: 180px;
+}
+
+/*
+Cart component renders a table which has bootstrap classes "table table-hover" and for rows, a class "row".
+*/
+
+/*
+CartItem component has an image element with bootstrap classes "product-img img-fluid" and height property "25%"
+*/
+
+/*
+Footer component had the following style and a bootstrap class "well":
+
+		backgroundColor: '#1BBB3F',
+		color: '#FFFFFF',
+		fontFamily: 'Garamond',
+		fontSize: 12,
+
+*/
+
+/* ================================= 
+  WEB FONTS
+==================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+/* ================================= 
+  ELEMENT STYLES
+==================================== */
+
+body {
+	color: #576366;
+	background: #f3f3f3;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+ul {
+	margin: 0;
+	padding: 0;
+}
+h2 {
+	color: #404040;
+	font-size: 1.6em;
+	margin-bottom: 1.25em;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: #3b80d1;
+}
+hr {
+	border: 0;
+	height: 0;
+	margin: 2.3em 0 2em 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* FORM & BUTTON STYLES -------- */
+button {
+	color: white;
+	background: #6dc37b;
+	padding-left: 1em;
+	padding-right: 1em;
+	cursor: pointer;
+	border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ================================= 
+  LAYOUT & PAGE STYLES
+==================================== */
+header {
+	background: #6dc37b;
+}
+
+/* IMAGES -------- */
+
+.not-found {
+	text-align: center;
+}
+
+/* MAIN NAV -------- */
+
+.main-nav a {
+	font-size: 0.95em;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	padding: 1em;
+	transition: 0.2s;
+}
+.main-nav a:hover,
+.main-nav .active {
+	color: #fff;
+	background: #3b80d1;
+}
+
+/* ICONS -------- */
+
+.icn-logo i {
+	font-size: 2.45em;
+	line-height: 0;
+}
+.icn-error {
+	font-size: 3.2em;
+	margin-bottom: 0.25em;
+}
+
+/* ================================= 
+  MEDIA QUERIES
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+	.icn-logo {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 4px;
+	}
+	.main-nav a {
+		border-top: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+	}
+	.main-nav a:hover {
+		border-color: rgba(0, 0, 0, 0.1);
+	}
+}
+@media (min-width: 769px) {
+	/* MAIN NAV -------- */
+	.icn-logo {
+		margin-right: auto;
+		padding: 0 2em;
+	}
+	header,
+	.main-nav {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.main-nav a {
+		border-left: 3px solid transparent;
+		border-right: 3px solid transparent;
+		padding: 1.25em 1.5em;
+	}
+	.main-nav a:hover {
+		border-color: rgba(0, 0, 0, 0.1);
+	}
+}

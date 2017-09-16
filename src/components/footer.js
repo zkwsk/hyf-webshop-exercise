@@ -1,15 +1,8 @@
 import React from 'react';
 
 const Footer = () => {
-	const style = {
-		backgroundColor: '#1BBB3F',
-		color: '#FFFFFF',
-		fontFamily: 'Garamond',
-		fontSize: 12,
-	};
-
 	return (
-		<div className="well" style={style}>
+		<div className="well">
 			<footer>
 				<p>
 					Copyright © Hack Your Groceries {new Date().getFullYear()}

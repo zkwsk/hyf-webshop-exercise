@@ -4,11 +4,9 @@ import data from '../data/data.json';
 import CartStore from '../stores/CartStore';
 import CartActions from '../actions/CartActions';
 
-import StoreName from './store_name';
-import SearchBar from './search_bar';
-import AllProducts from './all_products';
-import Footer from './footer';
-import Cart from './Cart';
+import SearchBar from './SearchBar';
+import AllProducts from './AllProducts';
+import Footer from './Footer';
 
 class App extends React.Component {
 	constructor() {

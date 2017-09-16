@@ -14,17 +14,20 @@ class CartItem extends React.Component {
 	render() {
 		return (
 			<tr key={this.props.product.id}>
-				<td>
+				<td className="cart-product-img">
 					<img
-						className="product-img img-fluid"
 						src={`src/images/products/${this.props.product.id}.jpg`}
 						alt="product image"
 						height="25%"
 					/>
 				</td>
-				<td>{this.props.product.item_name}</td>
-				<td>{this.props.product.price}</td>
-				<td>
+				<td className="cart-product-name">
+					{this.props.product.item_name}
+				</td>
+				<td className="cart-product-price">
+					€{this.props.product.price}
+				</td>
+				<td className="cart-product-quantity">
 					<input
 						onChange={this.handleChange.bind(this)}
 						type="number"
@@ -34,7 +37,7 @@ class CartItem extends React.Component {
 						max="10"
 					/>
 				</td>
-				<td>
+				<td className="cart-product-remove">
 					<button
 						onClick={() => {
 							CartActions.removeFromCart(this.props.product);
@@ -43,8 +46,8 @@ class CartItem extends React.Component {
 						Remove
 					</button>
 				</td>
-				<td>
-					{(this.props.product.price * this.props.quantity).toFixed(
+				<td className="cart-product-total">
+					€{(this.props.product.price * this.props.quantity).toFixed(
 						2
 					)}
 				</td>

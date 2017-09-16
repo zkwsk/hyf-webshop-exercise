@@ -3,7 +3,6 @@ import CartStore from '../stores/CartStore';
 import CartActions from '../actions/CartActions';
 
 import CartItem from './CartItem';
-import StoreName from './store_name';
 
 class Cart extends React.Component {
 	constructor(props) {
@@ -14,6 +13,15 @@ class Cart extends React.Component {
 			tax: 0.2,
 			shipping: 0.06,
 		};
+
+		this.getSubTotal = this.getSubTotal.bind(this);
+	}
+
+	getSubTotal() {
+		this.state.cart
+			.map(item => item.product.price * item.quantity)
+			.reduce((sum, value) => sum + value),
+			0;
 	}
 
 	componentDidMount() {
@@ -33,15 +41,16 @@ class Cart extends React.Component {
 	render() {
 		return (
 			<div>
+				<h1>Your Shopping Cart</h1>
 				<table className="table table-hover">
 					<thead>
 						<tr className="row">
-							<th>Shopping Cart</th>
-							<th>Item Name</th>
-							<th>Price</th>
-							<th>Quantity</th>
-							<th>Remove Button</th>
-							<th>Total</th>
+							<th className="cart-product-img" />
+							<th className="cart-product-name" />
+							<th className="cart-product-price">Price</th>
+							<th className="cart-product-quantity">Quantity</th>
+							<th className="cart-product-remove" />
+							<th className="cart-product-total">Total</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -55,16 +64,16 @@ class Cart extends React.Component {
 					</tbody>
 				</table>
 				<div>
-					<span>Subtotal</span>
-					<span>Subtotal</span>
+					<span>Subtotal:</span>
+					<span>{this.getSubTotal}</span>
 				</div>
 				<div>
 					<span>Tax</span>
-					<span>{`${this.state.tax * 100}%`}</span>
+					<span>......</span>
 				</div>
 				<div>
 					<span>Shipping</span>
-					<span>{`${this.state.shipping * 100}%`}</span>
+					<span>.......</span>
 				</div>
 				<div>
 					<span>Grand Total</span>

@@ -20,6 +20,11 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-1'],
         },
       },
+      {
+        test: /\.css$/,
+        exclude: /(node_modules)/,
+        loader: 'style-loader!css-loader',
+      },
     ],
   },
   devServer: {

@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import StoreName from './components/store_name';
+import '../style/index.css';
+
+import Header from './components/Header';
 import App from './components/App';
 import Cart from './components/Cart';
 import NotFound from './components/NotFound';
@@ -12,7 +14,7 @@ class Root extends React.Component {
 		return (
 			<BrowserRouter>
 				<div>
-					<StoreName />
+					<Header />
 					<Switch>
 						<Route exact path="/" component={App} />
 						<Route path="/cart" component={Cart} />

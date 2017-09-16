@@ -61,9 +61,6 @@ typings/
 # Images folder
 src/images/
 
-# CSS folder
-style/
-
 # Test folder
 test/
 
