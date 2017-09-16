@@ -79,7 +79,7 @@ Footer component had the following style and a bootstrap class "well":
 
 body {
 	color: #576366;
-	background: #f3f3f3;
+	background: #fff;
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 }
@@ -107,6 +107,16 @@ button {
 	padding-right: 1em;
 	cursor: pointer;
 	border-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px #b4b6b6;
+}
+
+button:hover {
+	background: #22b01d;
+}
+
+button:active {
+	box-shadow: 0 0 #b4b6b6;
+	transform: translateY(2px);
 }
 
 /* ================================= 
