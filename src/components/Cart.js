@@ -64,20 +64,16 @@ class Cart extends React.Component {
 					</tbody>
 				</table>
 				<div>
-					<span>Subtotal:</span>
-					<span>{this.getSubTotal}</span>
+					<span>Subtotal: {this.getSubTotal}</span>
 				</div>
 				<div>
-					<span>Tax</span>
-					<span>......</span>
+					<span>Tax......</span>
 				</div>
 				<div>
-					<span>Shipping</span>
-					<span>.......</span>
+					<span>Shipping.......</span>
 				</div>
 				<div>
-					<span>Grand Total</span>
-					<span>Total</span>
+					<span>Grand Total.....</span>
 				</div>
 				<button>Checkout</button>
 			</div>
