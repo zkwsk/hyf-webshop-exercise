@@ -45,7 +45,9 @@ class Cart extends React.Component {
 				<table className="table table-hover">
 					<thead>
 						<tr className="row">
-							<th className="cart-product-img" />
+							<th className="cart-product-img-header">
+								<img height="25%" />
+							</th>
 							<th className="cart-product-name" />
 							<th className="cart-product-price">Price</th>
 							<th className="cart-product-quantity">Quantity</th>

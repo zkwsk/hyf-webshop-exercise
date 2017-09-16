@@ -18,7 +18,6 @@ class CartItem extends React.Component {
 					<img
 						src={`src/images/products/${this.props.product.id}.jpg`}
 						alt="product image"
-						height="25%"
 					/>
 				</td>
 				<td className="cart-product-name">

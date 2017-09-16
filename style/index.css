@@ -1,15 +1,4 @@
 /*
-App component had no internal style. Nothing removed.
-*/
-
-/*
-Header component had the following style:
-	const style = {
-		backgroundColor: '#6DC37B',
-	};
-*/
-
-/*
 	SearchBar had the following style and a bootstrap class "well":
 	const style = {
 		backgroundColor: '#F3F3F3',
@@ -34,10 +23,14 @@ Header component had the following style:
 		height: '40px',
 		textAlign: 'center',
 	};
-*/
 
-/*
-AllProducts component: main div has an id of "all-products" and has a className of "well"
+Footer component had the following style and a bootstrap class "well":
+
+		backgroundColor: '#1BBB3F',
+		color: '#FFFFFF',
+		fontFamily: 'Garamond',
+		fontSize: 12,
+
 */
 
 .store-all-products {
@@ -46,7 +39,6 @@ AllProducts component: main div has an id of "all-products" and has a className 
 	padding: 10px;
 }
 
-/*SingleProduct component had the following style and the image element has a height property of 180px:*/
 .store-single-product {
 	display: inline-block;
 	width: 240px;
@@ -61,23 +53,19 @@ AllProducts component: main div has an id of "all-products" and has a className 
 	height: 180px;
 }
 
-/*
-Cart component renders a table which has bootstrap classes "table table-hover" and for rows, a class "row".
-*/
+.cart-product-img-header {
+	display: inline-block;
+	height: 30px;
+}
 
-/*
-CartItem component has an image element with bootstrap classes "product-img img-fluid" and height property "25%"
-*/
+.cart-product-img {
+	display: inline-block;
+	height: 100px;
+}
 
-/*
-Footer component had the following style and a bootstrap class "well":
-
-		backgroundColor: '#1BBB3F',
-		color: '#FFFFFF',
-		fontFamily: 'Garamond',
-		fontSize: 12,
-
-*/
+.cart-product-img img {
+	height: 100%;
+}
 
 /* ================================= 
   WEB FONTS
@@ -98,26 +86,17 @@ body {
 h1,
 h2,
 ul {
-	margin: 0;
+	margin-top: 20px;
+	margin-bottom: 10px;
 	padding: 0;
 }
-h2 {
-	color: #404040;
-	font-size: 1.6em;
-	margin-bottom: 1.25em;
-}
+
 ul {
 	list-style-type: none;
 }
 a {
 	text-decoration: none;
 	color: #3b80d1;
-}
-hr {
-	border: 0;
-	height: 0;
-	margin: 2.3em 0 2em 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* FORM & BUTTON STYLES -------- */
