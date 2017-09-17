@@ -10,8 +10,6 @@ class Cart extends React.Component {
 
 		this.state = {
 			cart: CartStore.getState(),
-			tax: 0.2,
-			shipping: 0.06,
 		};
 	}
 
@@ -61,7 +59,7 @@ class Cart extends React.Component {
 						<span className="cart-total-line">
 							Cart Total &nbsp;
 						</span>
-						<span className="cart-total-figure">
+						<span className="cart-total-figure well">
 							€{this.state.cart
 								.map(item => item.product.price * item.quantity)
 								.reduce((sum, value) => sum + value, 0)
